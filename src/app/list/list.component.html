@@ -1,0 +1,12 @@
+<h2>{{ title }}</h2>
+<img [src]="srcpath" alt="">
+<ul *ngIf="listItems">
+  <li *ngFor='let item of listItems' appBold>
+    {{ item }}
+  </li>
+</ul>
+
+<button (click)='onSelect()'>Submit</button>
+
+{{user}}
+<input [(ngModel)]="user" [ngModelOptions]="{standalone: true}">
